@@ -1,3 +1,12 @@
+export async function generateMetadata() {
+  const res = await fetch("https://nice-dogs.vercel.app/api/dogs?slug=henry");
+  const data = await res.json();
+  return {
+    title: data.name,
+    description: `Er ${data.age} år gammel`,
+  };
+}
+
 export default async function Henry() {
   const res = await fetch("https://nice-dogs.vercel.app/api/dogs?slug=henry");
   const data = await res.json();
