@@ -13,7 +13,7 @@ export default async function Henry() {
   console.log(data);
   return (
     <main>
-      <img className="max-w-xs" src={data.image.url} alt={data.name} />
+      <img src={data.image.url} alt={data.name} />
       <h1 className="grid mb-2">
         Name <span>{data.name}</span>
       </h1>
