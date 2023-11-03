@@ -33,6 +33,8 @@ export default async function Dog({ params }) {
       <Image
         className="w-auto h-auto"
         src={data.image.url}
+        placeholder="blur"
+        blurDataURL={data.image.url}
         alt={data.name}
         width={data.image.width}
         height={data.image.height}
